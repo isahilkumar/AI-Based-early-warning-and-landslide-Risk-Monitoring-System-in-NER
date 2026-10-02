@@ -202,31 +202,15 @@ export const GuidedDemoTourModal = ({ isOpen = false, onClose, onNavigateTab, on
   if (!isOpen) return null;
 
   return (
-    <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100vw',
-      height: '100vh',
-      background: 'rgba(9, 13, 22, 0.75)',
-      backdropFilter: 'blur(8px)',
-      zIndex: 2500,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '20px'
-    }}>
-      <div style={{
-        width: '100%',
-        maxWidth: '920px',
-        background: '#ffffff',
-        borderRadius: '18px',
-        overflow: 'hidden',
-        boxShadow: '0 25px 60px rgba(0, 0, 0, 0.35)',
-        border: '1px solid rgba(234, 88, 12, 0.3)',
-        display: 'flex',
-        flexDirection: 'column'
-      }}>
+    <div className="modal-overlay">
+      <div 
+        className="modal-dialog"
+        style={{
+          maxWidth: '920px',
+          background: '#ffffff',
+          border: '1px solid rgba(234, 88, 12, 0.3)'
+        }}
+      >
         {/* Header Ribbon */}
         <div style={{
           background: '#090d16',

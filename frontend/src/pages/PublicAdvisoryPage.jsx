@@ -62,10 +62,10 @@ export const PublicAdvisoryPage = ({ userRole = 'ADMIN' }) => {
   };
 
   return (
-    <div style={{ maxWidth: '1720px', margin: '0 auto', padding: '28px 36px', display: 'flex', flexDirection: 'column', gap: '28px' }}>
+    <div className="page-container">
       {/* Header */}
       <div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px', flexWrap: 'wrap' }}>
           <span style={{ background: '#fff7ed', color: '#ea580c', border: '1px solid #fdba74', padding: '4px 12px', borderRadius: '999px', fontSize: '0.74rem', fontWeight: 800 }}>
             🛡️ Citizen Safety & SOS Directory
           </span>
@@ -82,7 +82,7 @@ export const PublicAdvisoryPage = ({ userRole = 'ADMIN' }) => {
       </div>
 
       {/* 2-Column Layout */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(400px, 1.15fr) minmax(380px, 0.85fr)', gap: '28px' }}>
+      <div className="responsive-grid-2">
         {/* Left Column: Safety Protocols (Before, During, After) */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           {/* Before */}

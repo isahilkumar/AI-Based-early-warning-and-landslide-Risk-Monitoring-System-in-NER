@@ -70,7 +70,7 @@ export const Navbar = ({
       boxShadow: '0 4px 20px -2px rgba(234, 88, 12, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)'
     }}>
       {/* Top Status Bar: High-End Executive Command Ribbon */}
-      <div style={{
+      <div className="navbar-top-ribbon" style={{
         background: '#090d16',
         borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
         padding: '0 24px',
@@ -231,7 +231,7 @@ export const Navbar = ({
 
 
       {/* Main Navbar Header: Clean Single-Line Layout */}
-      <div style={{
+      <div className="navbar-header-row" style={{
         maxWidth: '1760px',
         margin: '0 auto',
         padding: '0 24px',
@@ -311,7 +311,7 @@ export const Navbar = ({
         </div>
 
         {/* Navigation Tabs (Center, Compact & Polished) */}
-        <nav style={{
+        <nav className="nav-tabs-container" style={{
           display: 'flex',
           alignItems: 'center',
           gap: '2px',

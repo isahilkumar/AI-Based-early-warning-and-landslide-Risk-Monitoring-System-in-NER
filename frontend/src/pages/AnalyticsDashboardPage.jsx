@@ -101,10 +101,10 @@ export const AnalyticsDashboardPage = () => {
   const radarFactors = trendsData?.susceptibility_radar || [];
 
   return (
-    <div style={{ maxWidth: '1720px', margin: '0 auto', padding: '28px 36px', display: 'flex', flexDirection: 'column', gap: '28px' }}>
+    <div className="page-container">
       {/* Header */}
       <div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px', flexWrap: 'wrap' }}>
           <span style={{ background: '#fff7ed', color: '#ea580c', border: '1px solid #fdba74', padding: '4px 12px', borderRadius: '999px', fontSize: '0.74rem', fontWeight: 800 }}>
             📊 Decision Support System
           </span>
@@ -155,9 +155,9 @@ export const AnalyticsDashboardPage = () => {
       </div>
 
       {/* Row 1: State Vulnerability Index (Bar) + 7-Day Trend (Area) */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.15fr) minmax(0, 0.85fr)', gap: '28px' }}>
+      <div className="responsive-grid-equal-2">
         {/* State Vulnerability Bar Chart */}
-        <div className="glass-panel" style={{ padding: '28px 32px' }}>
+        <div className="glass-panel" style={{ padding: '24px 28px' }}>
           <h3 style={{ fontSize: '1.1rem', color: '#ea580c', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 800 }}>
             <BarChart3 size={20} />
             <span>State-by-State Average Landslide Risk Index (%)</span>
@@ -186,7 +186,7 @@ export const AnalyticsDashboardPage = () => {
         </div>
 
         {/* 7-Day Rainfall vs Risk Trend */}
-        <div className="glass-panel" style={{ padding: '28px 32px' }}>
+        <div className="glass-panel" style={{ padding: '24px 28px' }}>
           <h3 style={{ fontSize: '1.1rem', color: '#ea580c', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 800 }}>
             <TrendingUp size={20} />
             <span>7-Day Timeline: Rainfall vs Risk Surge</span>
@@ -221,7 +221,7 @@ export const AnalyticsDashboardPage = () => {
       </div>
 
       {/* Row 2: Risk Pie + Susceptibility Radar */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 0.85fr) minmax(0, 1.15fr)', gap: '28px' }}>
+      <div className="responsive-grid-equal-2">
         {/* Risk Distribution Pie */}
         <div className="glass-panel" style={{ padding: '28px 32px' }}>
           <h3 style={{ fontSize: '1.1rem', color: '#ea580c', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 800 }}>
@@ -383,7 +383,7 @@ export const AnalyticsDashboardPage = () => {
         </div>
 
         {/* Table */}
-        <div style={{ overflowX: 'auto' }}>
+        <div className="table-responsive">
           <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: 0, fontSize: '0.85rem' }}>
             <thead>
               <tr>

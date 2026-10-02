@@ -97,11 +97,11 @@ export const EarlyWarningPage = ({ soundEnabled = false, alerts: propAlerts = nu
   const acknowledgedAlerts = alerts.filter(a => a.status !== 'ACTIVE');
 
   return (
-    <div style={{ maxWidth: '1720px', margin: '0 auto', padding: '28px 36px', display: 'flex', flexDirection: 'column', gap: '28px' }}>
+    <div className="page-container">
       {/* Page Header */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px', flexWrap: 'wrap' }}>
             <span style={{ background: '#fff7ed', color: '#ea580c', border: '1px solid #fdba74', padding: '4px 12px', borderRadius: '999px', fontSize: '0.74rem', fontWeight: 800 }}>
               🚨 Early Warning & Response System
             </span>
@@ -131,7 +131,7 @@ export const EarlyWarningPage = ({ soundEnabled = false, alerts: propAlerts = nu
       </div>
 
       {/* Rainfall Threshold Levels Matrix (IMD & GSI Regional Standard) */}
-      <div className="glass-panel" style={{ padding: '28px 32px' }}>
+      <div className="glass-panel" style={{ padding: '24px 28px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
           <h3 style={{ fontSize: '1.18rem', color: '#0f172a', display: 'flex', alignItems: 'center', gap: '10px', margin: 0, fontWeight: 800 }}>
             <Droplets size={22} color="#ea580c" />
@@ -142,7 +142,7 @@ export const EarlyWarningPage = ({ soundEnabled = false, alerts: propAlerts = nu
           </span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
           <div style={{
             background: '#f0fdf4',
             border: '1px solid #86efac',
@@ -206,7 +206,7 @@ export const EarlyWarningPage = ({ soundEnabled = false, alerts: propAlerts = nu
       </div>
 
       {/* 2-Column Grid: Alerts Stream vs Response Units */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(400px, 1.3fr) minmax(350px, 0.7fr)', gap: '28px' }}>
+      <div className="responsive-grid-2">
         {/* Left Column: Live Alerts Stream */}
         <div>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '18px' }}>

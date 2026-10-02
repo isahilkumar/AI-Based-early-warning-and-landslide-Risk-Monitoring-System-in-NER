@@ -75,22 +75,22 @@ export const EvacuationPlanningPage = ({ userRole = 'ADMIN' }) => {
     : facilities;
 
   return (
-    <div style={{ maxWidth: '1720px', margin: '0 auto', padding: '28px 36px', display: 'flex', flexDirection: 'column', gap: '28px' }}>
+    <div className="page-container">
       {/* Page Header */}
       <div style={{
         background: '#ffffff',
         border: '1px solid rgba(234, 88, 12, 0.25)',
         borderRadius: '16px',
-        padding: '26px 32px',
+        padding: '24px 28px',
         boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         flexWrap: 'wrap',
-        gap: '20px'
+        gap: '16px'
       }}>
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px', flexWrap: 'wrap' }}>
             <span style={{
               background: '#fff7ed',
               color: '#ea580c',
@@ -115,7 +115,7 @@ export const EvacuationPlanningPage = ({ userRole = 'ADMIN' }) => {
         </div>
 
         {/* Station Selector */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
           <label style={{ fontSize: '0.84rem', color: '#475569', fontWeight: 700 }}>Origin Hotspot:</label>
           <select
             value={selectedStation?.id || ''}
@@ -129,7 +129,8 @@ export const EvacuationPlanningPage = ({ userRole = 'ADMIN' }) => {
               fontSize: '0.88rem',
               fontWeight: 700,
               outline: 'none',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              maxWidth: '100%'
             }}
           >
             {locations.map(loc => (
@@ -142,7 +143,7 @@ export const EvacuationPlanningPage = ({ userRole = 'ADMIN' }) => {
       </div>
 
       {/* Main Grid: Left Column Route Comparison, Right Column Emergency Facilities Directory */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(400px, 1.15fr) minmax(380px, 0.85fr)', gap: '28px' }}>
+      <div className="responsive-grid-2">
         
         {/* Left Column: Recommended Evacuation Corridors & Blocked Road Analysis */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -150,7 +151,7 @@ export const EvacuationPlanningPage = ({ userRole = 'ADMIN' }) => {
             background: '#ffffff',
             border: '1px solid rgba(234, 88, 12, 0.25)',
             borderRadius: '16px',
-            padding: '28px 32px',
+            padding: '24px 28px',
             boxShadow: '0 4px 20px rgba(0,0,0,0.05)'
           }}>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 800, margin: '0 0 20px 0', color: '#ea580c', display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -165,14 +166,14 @@ export const EvacuationPlanningPage = ({ userRole = 'ADMIN' }) => {
                     background: '#ffffff',
                     border: '1px solid #fed7aa',
                     borderRadius: '14px',
-                    padding: '20px 24px',
+                    padding: '20px 22px',
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '16px',
                     boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
                   }}
                 >
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '10px' }}>
                     <div>
                       <span style={{
                         background: '#f0fdf4',
@@ -202,7 +203,7 @@ export const EvacuationPlanningPage = ({ userRole = 'ADMIN' }) => {
                   </div>
 
                   {/* Red Hazard Path vs Green Safe Path Comparison */}
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+                  <div className="responsive-grid-form-2">
                     <div style={{
                       background: '#fef2f2',
                       border: '1px solid #fca5a5',

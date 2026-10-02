@@ -237,22 +237,22 @@ export const CitizenReportPage = ({ userRole = 'ADMIN' }) => {
     : reports;
 
   return (
-    <div style={{ maxWidth: '1720px', margin: '0 auto', padding: '28px 36px', display: 'flex', flexDirection: 'column', gap: '28px' }}>
+    <div className="page-container">
       {/* Page Header */}
       <div style={{
         background: '#ffffff',
         border: '1px solid rgba(234, 88, 12, 0.25)',
         borderRadius: '16px',
-        padding: '26px 32px',
+        padding: '24px 28px',
         boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         flexWrap: 'wrap',
-        gap: '20px'
+        gap: '16px'
       }}>
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px', flexWrap: 'wrap' }}>
             <span style={{
               background: '#fff7ed',
               color: '#ea580c',
@@ -300,7 +300,7 @@ export const CitizenReportPage = ({ userRole = 'ADMIN' }) => {
       </div>
 
       {/* Main Grid: Left Column Form & AI Scanner, Right Column Live Incident Triage Stream */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(380px, 1.15fr) minmax(380px, 0.85fr)', gap: '28px' }}>
+      <div className="responsive-grid-2">
         
         {/* Left Column: Report Submission & AI Vision Inspection */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -308,7 +308,7 @@ export const CitizenReportPage = ({ userRole = 'ADMIN' }) => {
             background: '#ffffff',
             border: '1px solid rgba(234, 88, 12, 0.25)',
             borderRadius: '16px',
-            padding: '28px 32px',
+            padding: '24px 28px',
             boxShadow: '0 4px 20px rgba(0,0,0,0.05)'
           }}>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 800, margin: '0 0 18px 0', color: '#ea580c', display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -320,7 +320,7 @@ export const CitizenReportPage = ({ userRole = 'ADMIN' }) => {
               <label style={{ fontSize: '0.82rem', color: '#475569', display: 'block', marginBottom: '10px', fontWeight: 700 }}>
                 FIELD OBSERVATION SAMPLES (CLICK TO SCAN WITH AI VISION):
               </label>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '12px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
                 {presetImages.map(preset => (
                   <button
                     key={preset.id}
@@ -358,7 +358,7 @@ export const CitizenReportPage = ({ userRole = 'ADMIN' }) => {
               position: 'relative',
               overflow: 'hidden'
             }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Sparkles size={18} color="#ea580c" />
                   <span style={{ fontSize: '0.84rem', fontWeight: 900, color: '#ea580c', letterSpacing: '0.04em' }}>
@@ -401,7 +401,9 @@ export const CitizenReportPage = ({ userRole = 'ADMIN' }) => {
                         borderRadius: '8px',
                         display: 'flex',
                         justifyContent: 'space-between',
-                        fontSize: '0.8rem'
+                        fontSize: '0.8rem',
+                        flexWrap: 'wrap',
+                        gap: '6px'
                       }}>
                         <span style={{ color: '#334155' }}>• <strong>{feat.feature}</strong> ({feat.bounds})</span>
                         <span style={{ color: '#16a34a', fontWeight: 800 }}>{feat.confidence}% Confidence</span>
@@ -430,7 +432,7 @@ export const CitizenReportPage = ({ userRole = 'ADMIN' }) => {
 
             {/* Submission Form */}
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div className="responsive-grid-form-2">
                 <div>
                   <label style={{ fontSize: '0.8rem', color: '#475569', display: 'block', marginBottom: '6px', fontWeight: 600 }}>Reporter Name</label>
                   <input
@@ -453,7 +455,7 @@ export const CitizenReportPage = ({ userRole = 'ADMIN' }) => {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr 1fr', gap: '16px' }}>
+              <div className="responsive-grid-3">
                 <div>
                   <label style={{ fontSize: '0.8rem', color: '#475569', display: 'block', marginBottom: '6px', fontWeight: 600 }}>Incident Location Name</label>
                   <input

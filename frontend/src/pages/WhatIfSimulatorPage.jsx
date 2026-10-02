@@ -579,8 +579,8 @@ export const WhatIfSimulatorPage = ({ initialStation = null, preloadedStation = 
         </div>
       </div>
 
-      {/* 🎛️ Main 2-Column Section: Left Controls (45%) | Right Digital Twin GIS Map & 3x3 Matrix (55%) */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(420px, 1fr) minmax(520px, 1.25fr)', gap: '24px' }}>
+      {/* 🎛️ Main 2-Column Section: Left Controls | Right Digital Twin GIS Map & 3x3 Matrix */}
+      <div className="responsive-grid-2">
         
         {/* LEFT COLUMN: Digital Twin Stress Test Controls */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

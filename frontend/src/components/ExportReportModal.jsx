@@ -30,32 +30,13 @@ export const ExportReportModal = ({ isOpen = true, onClose }) => {
   };
 
   return (
-    <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100vw',
-      height: '100vh',
-      background: 'rgba(0, 0, 0, 0.6)',
-      backdropFilter: 'blur(8px)',
-      zIndex: 2000,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '28px'
-    }}>
+    <div className="modal-overlay">
       <div 
+        className="modal-dialog"
         style={{
-          width: '100%',
           maxWidth: '960px',
-          maxHeight: '92vh',
-          display: 'flex',
-          flexDirection: 'column',
-          overflow: 'hidden',
           background: '#ffffff',
-          border: '1px solid #fdba74',
-          borderRadius: '16px',
-          boxShadow: '0 20px 50px rgba(0,0,0,0.2)'
+          border: '1px solid #fdba74'
         }}
       >
         {/* Modal Header */}

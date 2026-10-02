@@ -418,11 +418,11 @@ export const ModelBenchmarkingPage = () => {
           </div>
 
           {/* 4-Model Comparative Benchmark Table & Multi-Bar Chart */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(420px, 1.1fr) minmax(380px, 0.9fr)', gap: '24px' }}>
+          <div className="responsive-grid-equal-2">
             
             {/* Table & Model Selection */}
             <div className="glass-panel" style={{ padding: '24px 28px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px', flexWrap: 'wrap', gap: '8px' }}>
                 <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0f172a', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <GitCompare size={20} color="#ea580c" />
                   <span>4-Model Empirical Evaluation Matrix</span>
@@ -432,7 +432,7 @@ export const ModelBenchmarkingPage = () => {
                 </span>
               </div>
 
-              <div style={{ overflowX: 'auto' }}>
+              <div className="table-responsive">
                 <table>
                   <thead>
                     <tr>
@@ -508,7 +508,7 @@ export const ModelBenchmarkingPage = () => {
           </div>
 
           {/* Confusion Matrix (2x2) & ROC-AUC Curve */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(340px, 0.95fr) minmax(440px, 1.05fr)', gap: '24px' }}>
+          <div className="responsive-grid-equal-2">
             
             {/* Confusion Matrix Card */}
             <div className="glass-panel" style={{ padding: '24px 28px' }}>
@@ -827,7 +827,7 @@ export const ModelBenchmarkingPage = () => {
               <span>Service Level Agreements & Sub-System Benchmarks</span>
             </h3>
 
-            <div style={{ overflowX: 'auto' }}>
+            <div className="table-responsive">
               <table>
                 <thead>
                   <tr>
@@ -909,7 +909,7 @@ export const ModelBenchmarkingPage = () => {
               </span>
             </div>
 
-            <div style={{ overflowX: 'auto' }}>
+            <div className="table-responsive">
               <table>
                 <thead>
                   <tr>

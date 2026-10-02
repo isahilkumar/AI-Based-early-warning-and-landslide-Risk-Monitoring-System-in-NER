@@ -748,19 +748,7 @@ export const InteractiveMapPage = ({ onSelectStationForSimulator }) => {
 
       {/* Right Slideout Drawer: Station Telemetry, Explainable AI (SHAP), & Future Forecast */}
       {(selectedStation || customPredictionResult) && (
-        <aside style={{
-          width: '460px',
-          height: '100%',
-          background: '#ffffff',
-          borderLeft: '1px solid rgba(234, 88, 12, 0.25)',
-          boxShadow: '-10px 0 35px rgba(0, 0, 0, 0.08)',
-          display: 'flex',
-          flexDirection: 'column',
-          zIndex: 600,
-          overflowY: 'auto',
-          padding: '26px 24px',
-          gap: '20px'
-        }}>
+        <aside className="map-station-drawer">
           {/* Drawer Header */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '4px' }}>
             <div>
