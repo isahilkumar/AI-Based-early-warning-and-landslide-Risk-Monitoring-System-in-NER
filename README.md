@@ -9,6 +9,7 @@
 [![ML Accuracy](https://img.shields.io/badge/ML%20Accuracy-94.21%25-ea580c?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://github.com/isahilkumar/AI-Based-early-warning-and-landslide-Risk-Monitoring-System-in-NER)
 [![ROC-AUC](https://img.shields.io/badge/ROC--AUC-0.9788-38bdf8?style=for-the-badge)](https://github.com/isahilkumar/AI-Based-early-warning-and-landslide-Risk-Monitoring-System-in-NER)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/isahilkumar/AI-Based-early-warning-and-landslide-Risk-Monitoring-System-in-NER)
 
 > **Core Philosophy:** *"Don't just predict landslides—simulate the risk before it happens."*  
 > **Operational Scope:** North Eastern Region (NER), India — 8 States: **Sikkim, Assam, Meghalaya, Arunachal Pradesh, Nagaland, Manipur, Mizoram, Tripura**.
@@ -158,9 +159,23 @@ An explicit audit trail is maintained for every data layer ingested into LANDSAF
 
 ---
 
-## ⚡ Quickstart Guide
+## ⚡ Deployment & Quickstart Guide
 
-### Option 1: 1-Click Launch (Windows)
+### Option 1: 1-Click Cloud Deployment (Render Blueprint)
+Deploy both the **Django REST API** and the **React Vite GIS Dashboard** instantly to Render:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/isahilkumar/AI-Based-early-warning-and-landslide-Risk-Monitoring-System-in-NER)
+
+1. Click the **Deploy to Render** button above.
+2. Sign in with GitHub on Render.
+3. Render automatically reads [`render.yaml`](render.yaml) and provisions:
+   - `landsafener-backend` (Gunicorn + Django API + ML Engine)
+   - `landsafener-frontend` (Static Web App with auto-linked API proxy)
+4. Click **Apply** — your system will be live with free SSL certificates in minutes!
+
+---
+
+### Option 2: 1-Click Launch (Windows Local)
 Run the included launcher script from PowerShell or Command Prompt:
 
 ```powershell
@@ -171,7 +186,16 @@ Run the included launcher script from PowerShell or Command Prompt:
 
 ---
 
-### Option 2: Manual Step-by-Step Setup
+### Option 3: 1-Command Docker Deployment (Local / VPS)
+```bash
+docker compose up -d --build
+```
+> **Web App**: `http://localhost/`  
+> **Backend API**: `http://localhost:8000/api/`
+
+---
+
+### Option 4: Manual Step-by-Step Setup
 
 #### 1. Backend Setup (Django REST Framework)
 ```bash
