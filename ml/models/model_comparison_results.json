@@ -1,0 +1,550 @@
+{
+  "Logistic Regression": {
+    "accuracy": 0.8938,
+    "precision": 0.9203,
+    "recall": 0.9063,
+    "f1_score": 0.9133,
+    "roc_auc": 0.9654,
+    "confusion_matrix": [
+      [
+        214,
+        31
+      ],
+      [
+        37,
+        358
+      ]
+    ],
+    "roc_curve": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.0041,
+        "tpr": 0.6709
+      },
+      {
+        "fpr": 0.0122,
+        "tpr": 0.7165
+      },
+      {
+        "fpr": 0.0245,
+        "tpr": 0.7924
+      },
+      {
+        "fpr": 0.0367,
+        "tpr": 0.8177
+      },
+      {
+        "fpr": 0.0612,
+        "tpr": 0.8253
+      },
+      {
+        "fpr": 0.0694,
+        "tpr": 0.843
+      },
+      {
+        "fpr": 0.0857,
+        "tpr": 0.8759
+      },
+      {
+        "fpr": 0.0939,
+        "tpr": 0.881
+      },
+      {
+        "fpr": 0.102,
+        "tpr": 0.8861
+      },
+      {
+        "fpr": 0.1184,
+        "tpr": 0.9013
+      },
+      {
+        "fpr": 0.1306,
+        "tpr": 0.9063
+      },
+      {
+        "fpr": 0.1673,
+        "tpr": 0.9114
+      },
+      {
+        "fpr": 0.1878,
+        "tpr": 0.9266
+      },
+      {
+        "fpr": 0.1959,
+        "tpr": 0.9367
+      },
+      {
+        "fpr": 0.2286,
+        "tpr": 0.9418
+      },
+      {
+        "fpr": 0.2531,
+        "tpr": 0.9468
+      },
+      {
+        "fpr": 0.2776,
+        "tpr": 0.9544
+      },
+      {
+        "fpr": 0.298,
+        "tpr": 0.962
+      },
+      {
+        "fpr": 0.3102,
+        "tpr": 0.9696
+      },
+      {
+        "fpr": 0.351,
+        "tpr": 0.9747
+      },
+      {
+        "fpr": 0.3796,
+        "tpr": 0.9823
+      },
+      {
+        "fpr": 0.4122,
+        "tpr": 0.9899
+      },
+      {
+        "fpr": 0.4367,
+        "tpr": 0.9949
+      },
+      {
+        "fpr": 1.0,
+        "tpr": 1.0
+      }
+    ],
+    "feature_importances": {
+      "rainfall_24h": 0.275,
+      "slope": 0.2397,
+      "rainfall_72h": 0.1199,
+      "geology_code": 0.0722,
+      "ndvi": 0.0694,
+      "soil_moisture": 0.0586,
+      "historical_landslide_count": 0.058,
+      "distance_to_fault_km": 0.0508,
+      "elevation": 0.0157,
+      "terrain_ruggedness": 0.0121,
+      "humidity": 0.0079,
+      "distance_to_road_cut_m": 0.0078,
+      "temperature": 0.0064,
+      "land_cover_code": 0.0048,
+      "aspect": 0.0017
+    },
+    "test_samples": 640
+  },
+  "Random Forest": {
+    "accuracy": 0.9234,
+    "precision": 0.9303,
+    "recall": 0.9468,
+    "f1_score": 0.9385,
+    "roc_auc": 0.9804,
+    "confusion_matrix": [
+      [
+        217,
+        28
+      ],
+      [
+        21,
+        374
+      ]
+    ],
+    "roc_curve": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.1899
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.238
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.357
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.3873
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.6886
+      },
+      {
+        "fpr": 0.0082,
+        "tpr": 0.7646
+      },
+      {
+        "fpr": 0.0204,
+        "tpr": 0.7899
+      },
+      {
+        "fpr": 0.0286,
+        "tpr": 0.8228
+      },
+      {
+        "fpr": 0.0408,
+        "tpr": 0.8582
+      },
+      {
+        "fpr": 0.0531,
+        "tpr": 0.881
+      },
+      {
+        "fpr": 0.0653,
+        "tpr": 0.8962
+      },
+      {
+        "fpr": 0.0735,
+        "tpr": 0.9165
+      },
+      {
+        "fpr": 0.0857,
+        "tpr": 0.9266
+      },
+      {
+        "fpr": 0.1143,
+        "tpr": 0.9519
+      },
+      {
+        "fpr": 0.1224,
+        "tpr": 0.9595
+      },
+      {
+        "fpr": 0.1388,
+        "tpr": 0.9646
+      },
+      {
+        "fpr": 0.1673,
+        "tpr": 0.9696
+      },
+      {
+        "fpr": 0.1878,
+        "tpr": 0.9797
+      },
+      {
+        "fpr": 0.2408,
+        "tpr": 0.9848
+      },
+      {
+        "fpr": 0.3224,
+        "tpr": 0.9924
+      },
+      {
+        "fpr": 0.449,
+        "tpr": 0.9975
+      },
+      {
+        "fpr": 0.8082,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.8694,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 1.0,
+        "tpr": 1.0
+      }
+    ],
+    "feature_importances": {
+      "slope": 0.1974,
+      "rainfall_24h": 0.1161,
+      "distance_to_fault_km": 0.1095,
+      "soil_moisture": 0.1077,
+      "rainfall_72h": 0.0926,
+      "terrain_ruggedness": 0.0819,
+      "humidity": 0.0755,
+      "distance_to_road_cut_m": 0.0681,
+      "geology_code": 0.0456,
+      "ndvi": 0.0232,
+      "historical_landslide_count": 0.0216,
+      "elevation": 0.0195,
+      "temperature": 0.0157,
+      "aspect": 0.0137,
+      "land_cover_code": 0.0119
+    },
+    "test_samples": 640
+  },
+  "Gradient Boosting": {
+    "accuracy": 0.9344,
+    "precision": 0.9491,
+    "recall": 0.9443,
+    "f1_score": 0.9467,
+    "roc_auc": 0.9788,
+    "confusion_matrix": [
+      [
+        225,
+        20
+      ],
+      [
+        22,
+        373
+      ]
+    ],
+    "roc_curve": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2051
+      },
+      {
+        "fpr": 0.0041,
+        "tpr": 0.6658
+      },
+      {
+        "fpr": 0.0122,
+        "tpr": 0.6861
+      },
+      {
+        "fpr": 0.0163,
+        "tpr": 0.7696
+      },
+      {
+        "fpr": 0.0245,
+        "tpr": 0.8076
+      },
+      {
+        "fpr": 0.0327,
+        "tpr": 0.8203
+      },
+      {
+        "fpr": 0.0367,
+        "tpr": 0.8506
+      },
+      {
+        "fpr": 0.0449,
+        "tpr": 0.8582
+      },
+      {
+        "fpr": 0.049,
+        "tpr": 0.881
+      },
+      {
+        "fpr": 0.0653,
+        "tpr": 0.9013
+      },
+      {
+        "fpr": 0.0735,
+        "tpr": 0.9089
+      },
+      {
+        "fpr": 0.0776,
+        "tpr": 0.9392
+      },
+      {
+        "fpr": 0.0898,
+        "tpr": 0.9468
+      },
+      {
+        "fpr": 0.1061,
+        "tpr": 0.9519
+      },
+      {
+        "fpr": 0.1224,
+        "tpr": 0.9595
+      },
+      {
+        "fpr": 0.1347,
+        "tpr": 0.962
+      },
+      {
+        "fpr": 0.1469,
+        "tpr": 0.9696
+      },
+      {
+        "fpr": 0.1755,
+        "tpr": 0.9722
+      },
+      {
+        "fpr": 0.1837,
+        "tpr": 0.9772
+      },
+      {
+        "fpr": 0.2041,
+        "tpr": 0.9848
+      },
+      {
+        "fpr": 0.249,
+        "tpr": 0.9873
+      },
+      {
+        "fpr": 0.2898,
+        "tpr": 0.9924
+      },
+      {
+        "fpr": 0.3184,
+        "tpr": 0.9949
+      },
+      {
+        "fpr": 1.0,
+        "tpr": 1.0
+      }
+    ],
+    "feature_importances": {
+      "slope": 0.33,
+      "rainfall_24h": 0.3084,
+      "rainfall_72h": 0.1007,
+      "distance_to_fault_km": 0.0748,
+      "distance_to_road_cut_m": 0.0465,
+      "geology_code": 0.0369,
+      "soil_moisture": 0.0272,
+      "ndvi": 0.0189,
+      "humidity": 0.0174,
+      "terrain_ruggedness": 0.0132,
+      "historical_landslide_count": 0.0095,
+      "elevation": 0.0055,
+      "aspect": 0.0053,
+      "temperature": 0.0032,
+      "land_cover_code": 0.0025
+    },
+    "test_samples": 640
+  },
+  "XGBoost": {
+    "accuracy": 0.9297,
+    "precision": 0.9442,
+    "recall": 0.9418,
+    "f1_score": 0.943,
+    "roc_auc": 0.9783,
+    "confusion_matrix": [
+      [
+        223,
+        22
+      ],
+      [
+        23,
+        372
+      ]
+    ],
+    "roc_curve": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.0987
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.2203
+      },
+      {
+        "fpr": 0.0041,
+        "tpr": 0.7266
+      },
+      {
+        "fpr": 0.0122,
+        "tpr": 0.7494
+      },
+      {
+        "fpr": 0.0204,
+        "tpr": 0.757
+      },
+      {
+        "fpr": 0.0286,
+        "tpr": 0.8025
+      },
+      {
+        "fpr": 0.0327,
+        "tpr": 0.8253
+      },
+      {
+        "fpr": 0.0408,
+        "tpr": 0.8456
+      },
+      {
+        "fpr": 0.049,
+        "tpr": 0.8481
+      },
+      {
+        "fpr": 0.0612,
+        "tpr": 0.8633
+      },
+      {
+        "fpr": 0.0653,
+        "tpr": 0.8759
+      },
+      {
+        "fpr": 0.0735,
+        "tpr": 0.9114
+      },
+      {
+        "fpr": 0.0816,
+        "tpr": 0.9266
+      },
+      {
+        "fpr": 0.0898,
+        "tpr": 0.9342
+      },
+      {
+        "fpr": 0.098,
+        "tpr": 0.9468
+      },
+      {
+        "fpr": 0.1061,
+        "tpr": 0.9519
+      },
+      {
+        "fpr": 0.1184,
+        "tpr": 0.9595
+      },
+      {
+        "fpr": 0.1347,
+        "tpr": 0.962
+      },
+      {
+        "fpr": 0.1673,
+        "tpr": 0.9696
+      },
+      {
+        "fpr": 0.1755,
+        "tpr": 0.9772
+      },
+      {
+        "fpr": 0.2245,
+        "tpr": 0.9823
+      },
+      {
+        "fpr": 0.2653,
+        "tpr": 0.9848
+      },
+      {
+        "fpr": 0.3551,
+        "tpr": 0.9949
+      },
+      {
+        "fpr": 1.0,
+        "tpr": 1.0
+      }
+    ],
+    "feature_importances": {
+      "slope": 0.2123,
+      "rainfall_72h": 0.1714,
+      "rainfall_24h": 0.1452,
+      "soil_moisture": 0.0755,
+      "geology_code": 0.0714,
+      "distance_to_fault_km": 0.0701,
+      "distance_to_road_cut_m": 0.0681,
+      "historical_landslide_count": 0.0372,
+      "ndvi": 0.0311,
+      "land_cover_code": 0.0304,
+      "humidity": 0.0253,
+      "terrain_ruggedness": 0.0228,
+      "temperature": 0.0135,
+      "elevation": 0.0132,
+      "aspect": 0.0124
+    },
+    "test_samples": 640
+  }
+}

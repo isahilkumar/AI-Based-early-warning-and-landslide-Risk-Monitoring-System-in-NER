@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="shieldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b132b" />
+      <stop offset="50%" stop-color="#1c2541" />
+      <stop offset="100%" stop-color="#0b132b" />
+    </linearGradient>
+    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="slopeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="60%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="beaconGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Shield Container -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#shieldBg)" stroke="#38bdf8" stroke-width="1.8" stroke-opacity="0.85" />
+
+  <!-- Digital Grid Accent -->
+  <path d="M6 46h52M6 52h52" stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.2" />
+  <path d="M18 46v10M32 46v10M46 46v10" stroke="#38bdf8" stroke-width="0.7" stroke-opacity="0.2" />
+
+  <!-- Background Mountain Peak -->
+  <polygon points="12,48 28,22 42,48" fill="url(#mountainGrad)" opacity="0.8" />
+  
+  <!-- Foreground Slope / Terrain -->
+  <polygon points="22,48 40,16 54,48" fill="url(#slopeGrad)" />
+  <polygon points="34,48 40,16 54,48" fill="#065f46" opacity="0.6" />
+
+  <!-- Topographic Contour Curves -->
+  <path d="M14 44 Q 28 36, 44 42 T 52 46" fill="none" stroke="#6ee7b7" stroke-width="1.2" stroke-linecap="round" opacity="0.85" />
+  <path d="M18 48 Q 32 42, 48 46" fill="none" stroke="#a7f3d0" stroke-width="0.9" stroke-linecap="round" opacity="0.7" />
+
+  <!-- Early Warning Radar Pulse Waves from Peak -->
+  <path d="M34 14 A 8 8 0 0 1 46 14" fill="none" stroke="#f59e0b" stroke-width="1.6" stroke-linecap="round" opacity="0.9" />
+  <path d="M30 9 A 14 14 0 0 1 50 9" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round" opacity="0.75" />
+  <path d="M26 4 A 20 20 0 0 1 54 4" fill="none" stroke="#ef4444" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 2" opacity="0.5" />
+
+  <!-- Sensor Beacon Pin at Peak (Lat/Long Early Warning Node) -->
+  <circle cx="40" cy="16" r="3.2" fill="url(#beaconGlow)" filter="url(#glow)" />
+  <circle cx="40" cy="16" r="1.4" fill="#ffffff" />
+</svg>

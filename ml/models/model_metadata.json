@@ -1,0 +1,41 @@
+{
+  "best_model_name": "Gradient Boosting",
+  "best_f1_score": 0.9467,
+  "best_roc_auc": 0.9788,
+  "feature_columns": [
+    "rainfall_24h",
+    "rainfall_72h",
+    "slope",
+    "elevation",
+    "soil_moisture",
+    "ndvi",
+    "aspect",
+    "terrain_ruggedness",
+    "distance_to_fault_km",
+    "distance_to_road_cut_m",
+    "historical_landslide_count",
+    "temperature",
+    "humidity",
+    "land_cover_code",
+    "geology_code"
+  ],
+  "land_cover_map": {
+    "0": "Dense Forest",
+    "1": "Shrubland / Degraded Forest",
+    "2": "Terraced Agriculture",
+    "3": "Built-up / Urban Settlement",
+    "4": "Barren / Slope Cut / Excavation"
+  },
+  "geology_map": {
+    "0": "Alluvium (Plains)",
+    "1": "Massive Quartzite (Stable)",
+    "2": "Granite Gneiss (Moderate)",
+    "3": "Limestone / Karst",
+    "4": "Weathered Sandstone & Shale",
+    "5": "Foliated Schist / Weak Phyllite"
+  },
+  "total_dataset_size": 3200,
+  "training_samples": 2560,
+  "testing_samples": 640,
+  "positive_landslide_ratio": 0.6169
+}
