@@ -22,8 +22,8 @@ COPY backend/ /app/backend/
 
 WORKDIR /app/backend
 
-# Expose Django port
+# Expose default port
 EXPOSE 8000
 
-# Run migrations, seed, and start gunicorn
-CMD ["sh", "-c", "python manage.py migrate && python seed_advanced_data.py && gunicorn landsafener_backend.wsgi:application --bind 0.0.0.0:8000 --workers 3"]
+# Run migrations, seed, and start gunicorn binding to Render's dynamic $PORT
+CMD ["sh", "-c", "python manage.py migrate && python seed_advanced_data.py && gunicorn landsafener_backend.wsgi:application --bind 0.0.0.0:${PORT:-8000} --workers 2"]
