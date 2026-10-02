@@ -1,33 +1,16 @@
 services:
-  # 1. Backend REST API Web Service
+  # Single Unified Full-Stack Web Service (Frontend + Backend on ONE Link)
   - type: web
-    name: landsafener-backend
+    name: landsafener
     runtime: python
-    rootDir: backend
+    rootDir: .
     plan: free
-    buildCommand: pip install -r requirements.txt && python manage.py migrate && python seed_advanced_data.py
-    startCommand: gunicorn landsafener_backend.wsgi:application --bind 0.0.0.0:$PORT
+    buildCommand: cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt && python manage.py migrate && python seed_advanced_data.py
+    startCommand: cd backend && gunicorn landsafener_backend.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
       - key: DJANGO_DEBUG
         value: "False"
-
-  # 2. Frontend React/Vite Static Site
-  - type: web
-    name: landsafener-frontend
-    runtime: static
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-    envVars:
       - key: VITE_API_URL
-        fromService:
-          type: web
-          name: landsafener-backend
-          property: host
-          format: https://${host}/api
+        value: "/api"

@@ -5,11 +5,9 @@ const getApiBaseUrl = () => {
     return import.meta.env.VITE_API_URL;
   }
   if (typeof window !== 'undefined') {
-    if (window.location.hostname.includes('onrender.com')) {
-      return 'https://landsafener-backend.onrender.com/api';
-    }
-    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-      return `${window.location.protocol}//${window.location.hostname}:8000/api`;
+    // If not running on local Vite dev server port 5173, use same-origin /api
+    if (window.location.port !== '5173') {
+      return '/api';
     }
   }
   return 'http://127.0.0.1:8000/api';
