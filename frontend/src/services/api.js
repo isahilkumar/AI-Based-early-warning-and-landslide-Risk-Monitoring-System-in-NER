@@ -1,10 +1,25 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+const getApiBaseUrl = () => {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  if (typeof window !== 'undefined') {
+    if (window.location.hostname.includes('onrender.com')) {
+      return 'https://landsafener-backend.onrender.com/api';
+    }
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      return `${window.location.protocol}//${window.location.hostname}:8000/api`;
+    }
+  }
+  return 'http://127.0.0.1:8000/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 15000,
   headers: {
     'Content-Type': 'application/json',
   }

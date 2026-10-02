@@ -206,12 +206,13 @@ export const InteractiveMapPage = ({ onSelectStationForSimulator }) => {
           api.getSafeRoutes(),
           api.getCitizenReports()
         ]);
-        setLocations(locs);
-        setFacilities(facs);
-        setRoutes(rts);
-        setCitizenReports(reports);
-        if (locs.length > 0) {
-          setSelectedStation(locs[0]);
+        const validLocs = Array.isArray(locs) ? locs : [];
+        setLocations(validLocs);
+        setFacilities(Array.isArray(facs) ? facs : []);
+        setRoutes(Array.isArray(rts) ? rts : []);
+        setCitizenReports(Array.isArray(reports) ? reports : []);
+        if (validLocs.length > 0) {
+          setSelectedStation(validLocs[0]);
         }
       } catch (err) {
         console.error('Error fetching map data:', err);
